@@ -14,14 +14,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: The Vector's Blog
+
 email: s_vxv_s@outlook.com
+
 description: > # this means to ignore newlines until "baseurl:"
   Welcome to my blog.
+
   I am willing to share with you.
 baseurl: "" # the subpath of your site, e.g. /blog
+
 url: "https://svxvs.github.io/" # the base hostname & protocol for your site
+
 twitter_username:
-github_username:  VectorS
+
+github_username:  svxvs
 
 # Build settings
 markdown: kramdown
