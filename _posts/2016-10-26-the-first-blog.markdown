@@ -4,11 +4,12 @@ title:  "欢迎使用变身怪医!"
 date:   2016-10-26 16:41:03 +0800
 categories: jekyll update
 ---
-你会发现帖子文件夹名为 `_posts` . 
+你会发现帖子文件夹名为 `_posts` 。
+
 通常可以用 `jekyll serve` 命令来启动一个 web服务 以及 可以使得你更新文件时更新页面.
 
-添加新帖子(posts), 只需要在 `_posts` 目录以 `YYYY-MM-DD-name-of-post.ext` 的格式来命名新帖子文件. 
-同时查看源代码也是一个了解其工作原理的好方法.
+添加新帖子(posts)，只需要在 `_posts` 目录以 `YYYY-MM-DD-name-of-post.ext` 的格式来命名新帖子文件。 
+同时查看源代码也是一个了解其工作原理的好方法。
 
 变身怪医也提供了强大的支持代码片段:
 
