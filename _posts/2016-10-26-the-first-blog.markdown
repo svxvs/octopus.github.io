@@ -4,11 +4,13 @@ title:  "Hi,Welcome!"
 date:   2016-10-26 16:41:03 +0800
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+普通语句格式 `命令行语句格式` . 
+通常可以用 `jekyll serve` 命令来启动一个 web服务 以及在你更新文件时更新页面.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+添加新帖子(posts), 只需要在 `_posts` 目录以 `YYYY-MM-DD-name-of-post.ext` 的格式来命名新帖子文件. 
+同时查看源代码也是一个了解其工作原理的好方法.
 
-Jekyll also offers powerful support for code snippets:
+变身怪医也提供了强大的支持代码片段:
 
 {% highlight ruby %}
 def print_hi(name)
@@ -18,7 +20,7 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+查看 [Jekyll docs][jekyll-docs] 以得到更多帮助. 更多bug和特性需求，可以前往这个链接 [Jekyll’s GitHub repo][jekyll-gh]. 如果你有疑问可以在这里和大家一起讨论： [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
