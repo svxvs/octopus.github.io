@@ -7,6 +7,7 @@
 .idea/svxvs.github.io.iml
 .idea/workspace.xml
 .sass-cache/
+_config.yml
 Gemfile.lock
 LICENSE
 _site/
