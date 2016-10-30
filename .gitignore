@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/copyright/
+.idea/deployment.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/svxvs.github.io.iml
+.idea/workspace.xml
+.sass-cache/
+Gemfile.lock
+LICENSE
+_site/
+index.md
