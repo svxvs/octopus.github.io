@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "欢迎使用变身怪医!"
-date:   2016-10-26 16:41:03 +0800
+date:   2015-10-26 16:41:03 +0800
 categories: jekyll update
 ---
 你会发现帖子文件夹名为 `_posts` 。
