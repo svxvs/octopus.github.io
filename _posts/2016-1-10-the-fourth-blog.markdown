@@ -93,9 +93,7 @@ delete from 表名 where 位置[定取行];
 
 >mysql> insert into mysql.user(Host,User,Password) values(“localhost”,”用户名”,password(“密码”));  
 //刷新系统权限表  
-mysql>flush privileges;  
-这样就创建了一个名为：cplusplus 密码为：cplusplus.me 的用户。             
-
+mysql>flush privileges;
 
 //授权xxxx用户拥有数据库的所有权限。
 
