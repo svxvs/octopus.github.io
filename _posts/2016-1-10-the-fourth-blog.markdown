@@ -53,7 +53,7 @@ select *from 表名 limit 1,3
 
 //特例
 
->1、 "select y.*,b.bumen_name from yuangong as y inner join bumen as b on y.bumen_id=b.id  where b.bumen_name='{$bumen_name}'"  
+>1、 "select y.*,b.bumen_name from yuangong as y inner join bumen as b on y.bumen_id=b.id  where b.bumen_name='{$bumen_name}'"      
 >2、 "select password from user where username='{$username}'"            
 
 //insert语法
