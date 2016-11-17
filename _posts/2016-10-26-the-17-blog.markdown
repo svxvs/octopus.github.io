@@ -1,0 +1,251 @@
+---
+layout: post
+title:  "深入理解HTML5标签"
+date:   2015-10-26 16:41:03 +0800
+categories: jekyll update
+---
+
+<div class="detail-bd article fmt article__content">
+			<!--
+<script type="text/javascript">
+    /*580*90 创建于 2015-01-05*/
+    var cpro_id = "u1891686";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+-->
+                
+                    
+<h2>0. HTML5中最看重的理念“语义化”相比HTML有什么区别？</h2>
+
+<p>在之前翻译的<a rel="nofollow" href="http://segmentfault.com/a/1190000002680822">《如何写出高效率的HTML》</a>一文中提到了一些关于语义化标签的相关内容，这里搜集整理了一些语义化标签方面的问题和解答，以供大家参考。<br>
+语义化这个概念应该说是伴着HTML5应运而生，那么什么是HTML5中所谓的语义化？</p>
+
+<blockquote>
+  <p>简单来说就是：描述内容的含义(meaning)</p>
+</blockquote>
+
+<p>比如说<code>&lt;p&gt;</code>标签就是段落的意思，在HTML5中所有的标签都有它书面上的语义。而没有语义的标签在HTML中有，在HTML5中就没有了，比如<code>&lt;font&gt;</code>标签。而HTML5又为了补充HTML现在的不足而加上了一些新的标签，如<code>&lt;article&gt;</code>、<code>&lt;footer&gt;</code>、<code>&lt;header&gt;</code>等等。而这些标签的分类叫法也从<strong>"块级元素"</strong>与<strong>"行内元素"</strong>变成了<strong>“外围内容”</strong>与<strong>“短语内容”</strong>。<br>
+在HTML5中最基本的理念就是<strong>"语义"</strong>与<strong>"显示"</strong>分离，HTML5代码中出现的标签都是让开发人员或浏览器一看就知道是干什么用的东西，至于显示效果那是CSS3（Cascading Style Sheet）需要干的事情，所以在HTML5中这个两个好基友终于距离产生了美。<br>
+那么语义化以后对HTML文档有什么好处么？</p>
+
+<blockquote>
+  <ol>
+<li>可以提升可访问性与互操作性（兼容性会更好）；</li>
+  <li>改进搜索引擎的优化；</li>
+  <li>一般来说可以让HTML文件更小；</li>
+  <li>让代码更好唯护，与CSS3的关系更和谐。</li>
+  </ol>
+</blockquote>
+
+<h2>1. HTML5中的<code>&lt;nav&gt;</code>、<code>&lt;article&gt;</code>、<code>&lt;sections&gt;</code>、<code>&lt;aside&gt;</code> 、<code>&lt;footer&gt;</code>这些标签的理解与用处？</h2>
+
+<p>第一，对这个几个标签的理解：</p>
+
+<p>HTML5的设计者们可以说是用心良苦呀，他们认真分析HTML4.0中出来的问题，也就是当下最流行的写页面的方式就是<em>"DIV+CSS"</em>，我们也不难发现只要用到这个就可以把页面写即简单又漂亮。没有繁琐的标签在里面，需要什么功能就去加<code>&lt;div&gt;</code>标签就可以了。</p>
+
+<p>而<code>&lt;div&gt;</code>是什么呢？这个我们下一个问题详细说明。问题的关键在于<code>&lt;div&gt;</code>没有任何的语义，也就是说他要干的事是什么全凭开发者说了算。这就造成了严重的开发规范不统一，也就是说页面的导航栏是<code>&lt;div&gt;</code>，页面的边栏也是<code>&lt;div&gt;</code>，唯一区分它们的就是<code>id</code>。可能一些有心的开发者会把<code>&lt;div&gt;</code>的<code>id</code>写的语义明白些，比如：导航栏的<code>id</code>用<code>&lt;nav&gt;</code>，边栏的<code>id</code>用<code>&lt;aside&gt;</code>。这样的写法对其他的开发者看来还是很好的，因为看到<code>id</code>就可以知道这个<code>&lt;div&gt;</code>是干什么用的了。但是还是有一大部分的开发者会这么写，如：导航栏的<code>id</code>用<code>div1</code>，边栏的<code>id</code>用<code>div2</code>，这样的写法对用户来说的可能没有什么区别，因为开发者知道他们都代表什么，而对其他的开发者来说这真的是灭顶之灾，用英文来说就是“reading the fucking code”，而对开发者本身可能时间一长也不知道是什么意思了，但是下次开发的时候他们一定还有人是这么干的；</p>
+
+<p>回到正题，经过上面的介绍大家也许已经知道为什么在HTML5引用上面的标签了吧，就是为了解决开发规范不统一的问题同时也为了增强语义，有人也许会问为什么HTML5为什么那么在意语义？用了上面的标签可以说带来什么好处呢？这个答案用一个非常简单的话来说的那就是：为了统一规范与新功能的出现。</p>
+
+<p>他们这些标签功能就是代替<code>&lt;div&gt;</code>功能中的一部分，他们没有任何的默认样式，除了会让文本另起一行外；</p>
+
+<p>第二，这几个标签的语义与用法：</p>
+
+<ul>
+<li>
+<p><code>&lt;nav&gt;</code>：标记导航（对应网页中重要的链接群就需要用这个标签）包含在<code>&lt;nav&gt;</code>中间的通常是<code>&lt;ul&gt;</code>无序列表。当然如果是面包屑链接就需用到<code>&lt;ol&gt;</code>有序列表，只要记住这个语义自己灵活发挥就是可以了。</p>
+
+<blockquote>
+  <p>特别提示：</p>
+  
+  <ol>
+<li>HTML5规范不推荐对有辅助性的页脚链接用<code>&lt;nav&gt;</code>；</li>
+  <li>HTML5中不允许将<code>&lt;nav&gt;</code>嵌套在<code>&lt;address&gt;</code>标签中。</li>
+  </ol>
+</blockquote>
+</li>
+<li>
+<p><code>&lt;article&gt;</code>：文章标记标签（表示的是一个文档、页面、应用或是网站中的一个独立的容器，原则上来讲就是聚合）。</p>
+
+<blockquote>
+  <p>特别提示：</p>
+  
+  <ol>
+<li>
+<code>&lt;article&gt;</code>这个标签可以嵌套使用，但是他们必须是部分与整体的关系；</li>
+  <li>同样不能用在<code>&lt;address&gt;</code>标签中；</li>
+  <li>他与<code>&lt;section&gt;</code>标签容易混淆所以需要注意；</li>
+  </ol>
+</blockquote>
+</li>
+<li><p><code>&lt;section&gt;</code>：区块定义标签（表示的是文档或是应用的一个一般的块），他一般是有一组相似的主题的内容，一般会包含一个标题。可以用这个标签来写：文章的章节，标签式对话框中的各种标签页等等类似的功能。这里你会发现他与<code>&lt;article&gt;</code>这个标签很像对不对？那么怎么的开发中正确的应用他们呢？<br>
+其实也很简单，你就这样想：如果你的页面中需要一个单独的模块来实现一个单独的功能，也就是高聚合的情况，就用<code>&lt;article&gt;</code>，其他的时候都用<code>&lt;section&gt;</code>。</p></li>
+<li>
+<p><code>&lt;aside&gt;</code>：定义侧栏标签（表示一部分内容与页面的主体并不是有很大的关系，但是可以独立存在），用他可以实现：升式引用、侧栏、相关文章的链接框、广告、友情链接等等。</p>
+
+<blockquote>
+  <p>特别提示：</p>
+  
+  <ol>
+<li>如果使用多个<code>&lt;aside&gt;</code>，标签应该在主要内容的后面，这样有利于SEO的搜索与提升可访问性；</li>
+  <li>如果是与文章的主要内容有关系的图像需要用<code>&lt;figure&gt;</code>标签而。</li>
+  </ol>
+</blockquote>
+</li>
+<li>
+<p><code>&lt;footer&gt;</code>：页脚标签（与<code>&lt;header&gt;</code>标签对应的标签），用他可以实现的功能有：附录、索引、版权页、许可协议等。</p>
+
+<blockquote>
+  <p>特别提示：</p>
+  
+  <ol>
+<li>页脚并不一定是要位于所在元素的末尾，不过通常是这样的；</li>
+  <li>他不可以放在&lt;header&gt;标签中，也不可以相互嵌套，或是在<code>&lt;address&gt;</code>元素中。</li>
+  </ol>
+</blockquote>
+</li>
+</ul>
+<h2>2. HTML5通用的容器<code>&lt;div&gt;</code>、<code>&lt;span&gt;</code>在HTML5中的生存含义？</h2>
+
+<p><code>&lt;div&gt;</code>这个标签在很久很久以前就已经出现在HTML中了，他的全拼是（division）。而在HTML5中的很多的新标签都是他的功能的统一定义而已，因为<code>&lt;div&gt;</code>本身没有任何的语义，但是可以对他增加CSS样式，这样就可以很好的为页面做出一些我们理想中的效果。那么在HTML5为什么他还存在呢？那就是因为，在某些时候你会发现你用HTML5中的任何一个标签都不合适你现在需要的语义，所以在这个时候就需要用到<code>&lt;div&gt;</code>这个标签了。既然说到<code>&lt;div&gt;</code>，那么也要说说与他相对应的<code>&lt;span&gt;</code>这个标签，他也是一个没有任何语义的标签，起到的功能与作用是和<code>&lt;div&gt;</code>一样的，只不过用法不一样：<code>&lt;div&gt;</code>是块级的无语义容器，<code>&lt;span&gt;</code>是短语的无语义容器。</p>
+
+<p><code>&lt;div&gt;</code>的用法相信朋友们用的一定比我熟悉，所以这里关于他的用法就不多说了，只是针对在HTML5中对<code>&lt;div&gt;</code>的使用我提几点建议：</p>
+
+<ol>
+<li>如果你觉得用HTML5中的新的标签比用<code>&lt;div&gt;</code>合适就一定要用新的标签，因为<code>&lt;div&gt;</code>没有任何的语义，这个是HTML5所不倡导的；</li>
+<li>如果效果需要的话可以在HTML5新标签的外面加一个<code>&lt;div&gt;</code>标签，这样对HTML中的语义不会产生太大的影响。</li>
+</ol>
+<h2>3. 元素title属性对语义的重要性是什么？</h2>
+
+<p><code>title</code>属性这个刚一看会不会想到<code>&lt;title&gt;</code>标签？但是不要弄到错了，他们是完全不同的东西。平时在我们开发的时候很少会用到这个属性，首先说一下它是干什么的吧，其实他就是一个具有提示作用的属性，对于屏幕阅读器来说可以为用户朗读文本，所以正确的使用可以提升页面的访问性。</p>
+
+<h2>4. HTML5中的新标签对于写文本启到一些重要影响的标签有哪些？</h2>
+
+<p>在写这个问题的答案之前先说说关于这些标签的理解与用法：</p>
+
+<blockquote>
+  <ol>
+<li>明确html5的核心思想就是语义，所以不管是什么标签就看表达的意思，而不是看展现的效果；</li>
+  <li>关于文本的相关标签可以适当的想象成是语文中的标点符号这样可以方便记意与运用；</li>
+  </ol>
+</blockquote>
+
+<p>明白上面的两点我们在来说这些新的标签的语义与用法吧：<br><code>&lt;address&gt;</code>、<code>&lt;figure&gt;</code>、<code>&lt;time&gt;</code>这三个标签下一个问题中详细说这里就先不说了；<br><code>&lt;strong&gt;</code>、<code>&lt;em&gt;</code>这个两个标签在HTML4.0中就已经有了，但是在这里还是要说一下，因为在以前可能很少用到它们因为很少有人去注意语义；</p>
+
+<ul>
+<li>
+<code>&lt;strong&gt;</code>表示的是重要的文本（默认为粗体显示）&mdash;&mdash;重点是语义上的表达而不是展现的效果这个需要记住哦</li>
+<li>
+<code>&lt;em&gt;</code>表示的是强调的文本（默认为斜体）</li>
+</ul>
+<p><code>&lt;mark&gt;</code>标签是HTML5中的新元素，用来突出显示文本，它的效果就像是用荧光笔给重点的语句做标记一样；<br><code>&lt;span&gt;</code>标签这个也是在HTML中就已经有的了，以前的文章也大概的提过一下但是没有详细的说明，下面就详细的说明一下：</p>
+
+<ol>
+<li>
+<code>&lt;span&gt;</code>没有任何的语义，所以正确的使用方式是需要在没有其它合适有标签的时候才可以用它；</li>
+<li>它是短语级别的标签所以不会另起一行；</li>
+<li>同<code>&lt;div&gt;</code>一样在一定的情况下可以添加<code>&lt;span&gt;</code>标签利用微格式来增加语义；</li>
+<li>一般的情况下需要用CSS来控制它的显示样式因为它没有样式的展现样式；</li>
+</ol>
+<p><code>&lt;wbr&gt;</code>一个与<code>&lt;br&gt;</code>很像的新标签，区别在于它不会强制换行；<br><code>&lt;ruby&gt;</code>、<code>&lt;rp&gt;</code>、<code>&lt;rt&gt;</code>这几个标签就像是语文中的音标一样；<br><code>&lt;meter&gt;</code>可以用它做一些测量结果的显示与投票结果的显示（现在的问题是浏览器对它的支持不好）；<br><code>&lt;progress&gt;</code>同样的一个进度条的显示，可以用做一些很好的与用户交互的效果，问题是浏览器的兼容现在也不好。</p>
+
+<h2>5. HTML5中<code>&lt;address&gt;</code>、<code>&lt;figure&gt;</code>、<code>&lt;time&gt;</code>标签的正确用法与注意事项有哪些是你不知道的?</h2>
+
+<p><code>&lt;address&gt;</code>这个标签是新的，所以用他的人很少。至于正确的用法当然也很少有人去研究它，下面简单的总结一下：</p>
+
+<ol>
+<li>
+<code>&lt;address&gt;</code>是用来定义与HTML页面或页面一部分有关的作者、相关人员或组织的联系信息，通常位于页面底部或相关部分内；</li>
+<li>大多数时候，联系信息是作者的电子邮件或是指向联系信息页的链接，这个是正确的，不能用来标记“联系我们”中的办公地点，这是错误的用法；</li>
+<li>提供的信息要准确，不是说电子邮件的地址的正确性，而是说需要对应上提供信息的人，如果一个页面中有好多相关的人，那么提供信息的时候一定要确定信息准确性，不要张冠李戴；</li>
+<li>
+<code>&lt;address&gt;</code>标签中不能有<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>、<code>&lt;article&gt;</code>、<code>&lt;address&gt;</code>、<code>&lt;aside&gt;</code>、<code>&lt;footer&gt;</code>、<code>&lt;header&gt;</code>、<code>&lt;hgroup&gt;</code>、<code>&lt;nav&gt;</code>、<code>&lt;section&gt;</code>等标签；</li>
+</ol>
+<p><code>&lt;figure&gt;</code>这个元素是用来引入图表、图形、照片等，对应的场景就是像是杂志中的图片一样，在HTML5之前是没有一个专门的标签来做这个事的，之前如果实现这个功能就是用没有语义的<code>&lt;div&gt;</code>标签；</p>
+
+<blockquote>
+  <p>用法提示：<br>
+  1. <code>&lt;figure&gt;</code>元素可以包含多个内容块，但是只能有一个<code>&lt;figcaption&gt;</code>（可以理解成给图表加标题）标签；<br>
+  2. 可以用<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>来给<code>&lt;figure&gt;</code>增加标题；<br>
+  3. <code>&lt;figcaption&gt;</code>不能单独出现，需要有配套的内容一起出现。</p>
+</blockquote>
+
+<p><code>&lt;time&gt;</code>可以通过这个标签标记一个具体的时间或日期，应用场景通常就是一篇文章的发表时间。</p>
+
+<blockquote>
+  <p>需要注意的是：<br>
+  1. <code>datetime</code>中的时间最好与<code>&lt;time&gt;</code>标签中的文本元素日期一样，写法可以不一样；<br>
+  2. 如果这个时间是代表整个文章或是页面的时间需要添加<code>pubdate</code>属性；<br>
+  3. 不要在<code>&lt;time&gt;</code>标签中使用不确切的时间如：“今天中午”、“上周末”；<br>
+  4. 如果 使用<code>pubdate</code>属性需要注意的是要在同一个父标签下面不要出现张冠李戴的问题；<br>
+  5. <code>&lt;time&gt;</code>标签不能在嵌套另一个<code>&lt;time&gt;</code>标签；<br>
+  6. <code>datatime</code>中的时间格式需要是标准的机器可能的时间 如:YYYY-MM-DDThh:mm:ss</p>
+</blockquote>
+
+<p>其实作为新的标签，它们的用法还有很多，这里只是说了一些最基础的东西，不过我认为用会上面所有的东西就可以说是入门了。</p>
+
+<h2>5. 关于<code>&lt;em&gt;</code>、<code>&lt;strong&gt;</code>与<code>&lt;b&gt;</code>、<code>&lt;i&gt;</code>的前世今生？</h2>
+
+<p>各位开发过HTML的朋友都知道<code>&lt;em&gt;</code>与<code>&lt;i&gt;</code>、<code>&lt;strong&gt;</code>与<code>&lt;b&gt;</code>它们的展现形式一样的，一个是斜体一个是粗体，那么它们在HTML5中是怎么平相处的呢？下面我们来重点讲一下<code>&lt;b&gt;</code>、<code>&lt;i&gt;</code>的前世今生：</p>
+
+<blockquote>
+  <p>在很早以前，互联网那时还没有一个叫作CSS的东西出现的时候，为了区分文本中的重点与特殊的含意的文字<code>&lt;b&gt;</code>、<code>&lt;i&gt;</code>这对兄弟出现了。在它们的帮助下，页面的文字与用户之间的交互得到了提升。<br>
+  然而好景不长，在互联网飞速发展的情况下，很快出现一个叫CSS的东西，它的责任就是用来控制页面的表现形式的，当然也包括<code>&lt;b&gt;</code>、<code>&lt;i&gt;</code>所表现的形式，所以在HTML4.0与XHTML1中就有开发人员建议废弃<code>&lt;b&gt;</code>、<code>&lt;i&gt;</code>，取面代之的就是<code>&lt;strong&gt;</code>、<code>&lt;em&gt;</code>+CSS，因为他们有语义性可以更好的与用户交互。可是问题并没有就此结束，因为在开发的时候在一些情况下发现用<code>&lt;strong&gt;</code>、<code>&lt;em&gt;</code>总是不能很的好的表示语义，为此，在HTML5中<code>&lt;b&gt;</code>、<code>&lt;i&gt;</code>又以修改后的面貌展现给我们了，所以在HTML5中又重新启用了<code>&lt;b&gt;</code>、<code>&lt;i&gt;</code>这对兄弟。</p>
+</blockquote>
+
+<p>那么具体在HTML5中什么时候用它们呢？<br><code>&lt;b&gt;</code>标签表示出于实用的目的提醒读者注意的一块文字，不传达任何额外的重要性，也不表示其它的语义和语气，用于：关键词，产品名，操作指令等等；<br><code>&lt;i&gt;</code>标签表示一块不同于其它文字的文字，具有不同的语态或语气，用于：分类名称，技术术语，外语中的惯用词等等。</p>
+
+<h2>6. 如何使用ARIA提升可访问性？</h2>
+
+<p>语义真的有那么重要么？通过语义又怎么提高访问性与增加SEO的搜索的呢？因为现在一些SEO与浏览器或是屏幕阅读器（一个给残障人士用的文章阅读器）都在根据HTML5的新标准做一些新的功能，他们会跟具新的语义直接与自身的功能相对应。如果网页的开发者也是这么做的，那么你的网站的应用性会大大的增加。<br>
+上面又强调了一下语义的重要性，下面告诉大家一个更好的增强语义的小窍门，一定要好好看哦，因为这个小窍门朋友们不一定知道的：</p>
+
+<p>概念介绍：<em>WAI-ARIA(Web Accessibility Initiative's Accessible Rich Internet Applications)</em>无障碍网页倡议之可访问的富互联网应用，简称ARIA，他就是一种技术规范。他在HTML提供的语义的基础之上，他会使用属性来填补一些语义上的空白。</p>
+
+<p>ARIA的用法：</p>
+
+<ul>
+<li>正确运用ARIA中的地标角色：<br><br><ol>
+<li>role ="banner"(横幅)</li>
+<li>role="navigation"(导航)</li>
+<li>role="main"(主体)</li>
+<li>role="complementary"(补充性内容)</li>
+<li>role="contentinfo"(内容信息)<br>
+&gt; 小提示：地标角色只是ARIA规范中的一种，如果你感兴趣可以去官网阅读一下（地址：<a rel="nofollow" href="http://www.w3.org/TR/wai-aria/">http://www.w3.org/TR/wai-aria/</a> ）</li>
+</ol>
+</li>
+<li>将屏幕阅读器测试列入你的日常开发中；（因为他是最能直接反映出你的网站语义写的好不好的东西）；</li>
+<li>正确的为标签制定<code>id</code>与类（语义性一定要明显）；</li>
+<li>正确使用<code>class</code>类以及他提供的微格式；</li>
+</ul>
+<p>关于<code>class</code>的微格式，因为有很多人都知道或是认为<code>class</code>的属性是只能为一组元素应用CSS样式，其实并不是这样的，其实他还可以在不引用额外的标签下来增强语义，这就是微格式，微格式是使用约定的<code>class</code>名称来标示一块HTML从而来增强与应用程序、智能搜索与搜索机器人的交互。关于微格式的使用可以看看这个网址：<a rel="nofollow" href="http://microformats.org">http://microformats.org</a></p>
+
+<h2>7. 你想到过网页文件的命名会影响你网站的体验么？</h2>
+
+<p>这个一听第一感觉就是不靠谱，一个文件的名字还会影响到网站的体验？<br>
+正确的答案确实是：<strong><em>是的！</em></strong><br>
+如：文件名： <em>Html_First_Blog.htm</em> 与 <em>html-first-blog.html</em><br>
+这个两个文件名不管是在用户的体验上与搜索引擎上都第二个完胜第一个。是不是有人会问为什么 ？？<br>
+下面我就说一下有如下几点是需要我们注意的：</p>
+
+<ol>
+<li>文件名需要用小写字母：<br>
+应用场景就是最简单的输入地址吧，你认为下面哪种写起来更方便，这个请自己体会吧：<br><br><ul>
+<li><a rel="nofollow" href="http://192.168.0.1/TestHtml/The_First/Html5.html">http://192.168.0.1/TestHtml/The_First/Html5.html</a></li>
+<li><a rel="nofollow" href="http://192.168.0.1/testhtml/the-first/html5.html">http://192.168.0.1/testhtml/the-first/html5.html</a></li>
+</ul>
+</li>
+<li>用短横线分隔单词：<br>
+大家一定会认为，用"_"挺好，其实这是做C开发时候的写法，也可以说是习惯，但是在网站中“-”是搜索引擎更喜欢的style；</li>
+<li>使用标准的扩展名：<br>
+现在用好多的网站都是用.htm的扩展名，这个浏览器也不会报错，但是标准的扩展名就是.html的所以大家以后写的时候就不要省时间少写一个字母“l”了。</li>
+</ol>
+<p>记住以上几点才是正确的写网页文件的命名方法哦，不要把写其它语言的方法放进来。</p>
+
+<h3>参考文章：</h3>
+
+<blockquote>
+  <p><a rel="nofollow" href="http://blog.csdn.net/lihui130135/article/details/45033967">http://blog.csdn.net/lihui130135/article/details/45033967</a><br><a rel="nofollow" href="http://blog.csdn.net/lihui130135/article/details/45150501">http://blog.csdn.net/lihui130135/article/details/45150501</a><br><a rel="nofollow" href="http://blog.csdn.net/lihui130135/article/details/44748415">http://blog.csdn.net/lihui130135/article/details/44748415</a></p>
+</blockquote>
+
+                				            </div>
